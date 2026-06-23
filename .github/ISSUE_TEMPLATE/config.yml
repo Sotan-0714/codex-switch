@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security note
+    url: https://github.com/Sotan-0714/Apivot/blob/main/SECURITY.md
+    about: Please redact credentials, private URLs, and local secrets before posting.

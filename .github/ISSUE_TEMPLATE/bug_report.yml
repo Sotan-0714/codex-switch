@@ -1,0 +1,54 @@
+name: Bug report
+description: Report a problem with Apivot
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Apivot version
+      placeholder: "1.0.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Windows
+        - macOS Apple Silicon
+        - macOS Intel
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: tool
+    attributes:
+      label: Affected tool
+      options:
+        - Codex
+        - Claude Code
+        - Both
+        - App UI
+        - Packaging / installation
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Remove API keys, private URLs, and local secrets before posting.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Open...\n2. Click...\n3. See..."
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Optional. Please redact sensitive values.

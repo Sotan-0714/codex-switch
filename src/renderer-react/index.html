@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <script nonce="theme-init">
+      (() => {
+        try {
+          const preference = localStorage.getItem("apivot-v30-appearance") || "system";
+          const theme = preference === "system"
+            ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+            : preference;
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.dataset.engine = localStorage.getItem("apivot-engine") || "codex";
+        } catch (_) {
+          document.documentElement.dataset.theme = "light";
+          document.documentElement.dataset.engine = "codex";
+        }
+      })();
+    </script>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'nonce-theme-init'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/src/assets/icon-32.png" />
+    <title>Apivot</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

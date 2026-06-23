@@ -1,0 +1,17 @@
+node_modules/
+dist/
+outputs/
+renderer-dist/
+work/
+.env*
+*.log
+*.zip
+*.exe
+*.dmg
+*.blockmap
+*.asar
+builder-debug.yml
+profiles.json
+logs.jsonl
+*-backups/
+*-state-snapshots/
